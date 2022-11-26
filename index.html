@@ -7,6 +7,7 @@
   <title>Curso Responsive Design y Arquitectura CSS</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
   <link rel="stylesheet" href="css/init.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -60,6 +61,20 @@
       <p>
         Todos los elementos de nuestra interfaz tienen que ser flexibles y responsivos.
       </p>
+      <div class="box">
+
+      </div>
+      <div class="box-flexible"></div>
+      <div class="box-flexible-2">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente facere in nemo pariatur dicta adipisci
+          sint quas nostrum harum, molestias id ut magni quibusdam esse amet consequatur quisquam porro. Vel.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente facere in nemo pariatur dicta adipisci
+          sint quas nostrum harum, molestias id ut magni quibusdam esse amet consequatur quisquam porro. Vel.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente facere in nemo pariatur dicta adipisci
+          sint quas nostrum harum, molestias id ut magni quibusdam esse amet consequatur quisquam porro. Vel.</p>
+      </div>
+      <div class="box-flexible-3"></div>
+      <div class="box-flexible-4"></div>
     </article>
     <hr>
     <article id="multimedia-flexible" class="full-screen">
@@ -95,6 +110,7 @@
       </code></pre>
       <h3>Imágenes Responsivas</h3>
       <p>Simplemente adaptamos la imagen al tamaño de su contenedor.</p>
+      <img src="img/puesta-sol.jpg" alt="Puesta del Sol">
       <h4>Atributo <i>srcset</i> y <i>sizes</i></h4>
       <p>
         El propósito de estos atributos, es mejorar el rendimiento de carga, al colocar la misma imagen pero en
@@ -102,6 +118,18 @@
         tamaños y pesos,
         dependiendo del tamaño o la resolución de la pantalla.
       </p>
+      <img src="img/html5-3d-600.png"
+        srcset="img/html5-3d-600.png 1x, img/html5-3d-900.png 1.5x, img/html5-3d-1200.png 2x" alt="HTML5">
+      <br>
+
+      <img src="img/html5-3d-600.png"
+        srcset="img/html5-3d-600.png 500w, img/html5-3d-900.png 800w, img/html5-3d-1200.png 1200w" alt="HTML5">
+      <br>
+
+      <img src="img/html5-3d-600.png"
+        srcset="img/html5-3d-600.png 500w, img/html5-3d-900.png 800w, img/html5-3d-1200.png 1200w"
+        sizes="(max-width:480px)300px, (max-width:600px)480px, (max-width:768px)600px, (max-width:1024px)900px, (min-width:1200px)1200px"
+        alt="HTML5">
       <h4>Etiqueta <i>picture</i></h4>
       <p>
         El objetivo de esta etiqueta, no es sólo mostrar diferentes tamaños de la misma imagen,
@@ -109,6 +137,16 @@
         la
         pantalla y las diferencias en el diseño. Esto se conoce como "dirección de arte".
       </p>
+      <picture>
+        <source srcset="img/kitten-large.png" media="(min-width:900px)">
+        <source srcset="img/kitten-medium.png" media="(min-width:600px)">
+        <img src="img/kitten-small.png" alt="Kitten:Gatico">
+      </picture>
+      <br>
+      <picture>
+        <source srcset="img/butterfly.webp" type="image/webp">
+        <img src="img/butterfly.jpg" alt="Mariposa">
+      </picture>
       <h3>Videos Responsivos</h3>
       <h3>Iframes Responsivos </h3>
     </article>
