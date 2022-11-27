@@ -1,0 +1,9 @@
+@page {
+  size: A4;
+}
+body {
+  font-size: 12pt; /*  unidad de medida de un prosezador de texto para imprimir*/
+  font-family: serif;
+  background-color: #000;
+  color: #fff;
+}
