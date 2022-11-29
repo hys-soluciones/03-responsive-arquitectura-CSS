@@ -63,3 +63,70 @@ video {
 .aspect-ratio-1-1 {
   aspect-ratio: 1/1;
 }
+/* por cascada bamos a definir los estilos para impresion */
+@media print {
+  @page {
+    size: A5 landscape; /* tamaño A6 en forma horizontal */
+  }
+  body {
+    font-size: 10pt; /*  unidad de medida de un prosezador de texto para imprimir*/
+    font-family: sans-serif;
+    background-color: #000;
+    color: greenyellow;
+  }
+}
+
+/* @media para reducir movimientos */
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: auto;
+    scroll-behavior: smooth;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: black;
+    color: teal;
+  }
+}
+@media (prefers-color-scheme: light) {
+  html {
+    background-color: wheat;
+    color: darkblue;
+  }
+}
+@media (prefers-color-scheme: no-preference) {
+  html {
+    background-color: wheat;
+    color: darkred;
+  }
+}
+/* Las 2 anteriores no se aplican por la configuracion interna del window */
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: white;
+    color: black;
+  }
+}
+/* Mobile First min-width es lominimo del valor que de hacia arriba*/
+@media (min-width: 600px) {
+  html {
+    background-color: lightpink;
+  }
+}
+/* En Desktop First se usa max-width que significa del valor que de hacia abajo*/
+@media (max-width: 600px) {
+  html {
+    background-color: aqua;
+    color: blue;
+  }
+}
+@media (min-width: 800px) {
+  html {
+    background-color: wheat;
+  }
+}
+/* Breakpoints Ethan Marcotte en su libro Responsive Design páginas 113-114 nos propone la siguiente lista de puntos de interrupción según la resolución del dispositivo:*/
+
+/* Viewport  */
